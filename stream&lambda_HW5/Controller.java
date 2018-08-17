@@ -40,7 +40,7 @@ public class Controller {
 
 		List<String> list = new ArrayList<>();
 
-		Path path = Paths.get("C:\\Users\\whos\\Desktop\\TP\\hmwrk5\\Activities.txt");
+		Path path = Paths.get("..\\Activities.txt");
 
 		try (Stream<String> stream = Files.lines(path)) {
 			list = stream.flatMap(Pattern.compile("\t+")::splitAsStream).flatMap(Pattern.compile(" ")::splitAsStream)
